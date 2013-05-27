@@ -1,0 +1,96 @@
+<!DOCTYPE html><!--HTML5 doctype-->
+<html>
+<head>
+<title></title>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8"> 
+<style type="text/css">
+/*css goes here*/
+body {
+    color: white;
+    background-color: black;
+}
+
+#card {
+	background-color: #0075bd;
+	width: 10em;
+	height: 10em;
+	text-align: center;
+    transition: 2.5s ease-in-out;
+    -webkit-transition: 2.5s ease-in-out;
+    -ms-transition: 2.5s ease-in-out;
+    -moz-transition: 2.5s ease-in-out;
+}
+
+.numberInput {
+	width:3em;
+}
+</style>
+<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
+<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+
+<script type="text/javascript">
+    //JavaScript goes here
+    function update() {
+        //alert(document.getElementById("inputX").value);
+        var x = parseInt($("#inputX").val());
+        if (!isFinite(x)) x = 0;
+        var y = parseInt($("#inputY").val());
+        if (!isFinite(y)) y = 0;
+        var z = parseInt($("#inputZ").val());
+        if (!isFinite(z)) z = 0;
+
+        var card = document.getElementById("card");
+        //card.style.webkitTransform = 'rotate(' + z + 'deg) rotateX(' + x + 'deg) rotateY(' + y + 'deg)';
+        $("#card").css("transform", 'rotate(' + z + 'deg) rotateX(' + x + 'deg) rotateY(' + y + 'deg) ');
+        $("#card").css("-webkit-transform", 'rotate(' + z + 'deg) rotateX(' + x + 'deg) rotateY(' + y + 'deg) ');
+        $("#card").css("-ms-transform", 'rotate(' + z + 'deg) rotateX(' + x + 'deg) rotateY(' + y + 'deg) ');
+        $("#card").css("-moz-transform", 'rotate(' + z + 'deg) rotateX(' + x + 'deg) rotateY(' + y + 'deg) ');
+    }
+</script>
+
+<!--mstheme--><link rel="stylesheet" type="text/css" id="onetidThemeCSS" href="../../../_themes/Vintage/Vint1011-65001.css"><meta name="Microsoft Theme" content="Vintage 1011, default">
+</head>
+
+<body>
+<!-- content goes here-->
+<div data-role="header">
+<header><h1>Cool  Animation</h1></header>
+</div>
+
+<section>
+<div id="card">Rotate me <img src="http://www.w3.org/html/logo/downloads/HTML5_Badge_32.png "></div>
+<table width="100%">
+	<tr>
+		<th>X</th>
+    	<th>
+        <input type="range" name="slider" id="inputX" value="0" min="0" max="360"/>
+        </th>
+    </tr>
+    
+    <tr>
+        <th>Y</th>
+        <th>
+        <input type="range" name="slider" id="inputY" value="0" min="0" max="360"/>
+        </th>
+    </tr>
+    <tr>
+        <th>Z</th>
+        <th>
+        <input type="range" name="slider" id="inputZ" value="0" min="0" max="360"/>
+        </th>
+        
+	</tr>
+</table>
+<button onclick="update();">Update</button>
+</section>
+
+<aside>Rotate the rectable on the top around the x, y, z axis. Input in in degrees</aside>
+
+<div data-role="footer">
+<footer>Author: Alexander Weggerle</footer>
+</div>
+</body>
+
+
+</html>
