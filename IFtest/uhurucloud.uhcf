@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<CloudApplication xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Deployable="true" Memory="128" InstanceCount="1" Name="IFtest" Framework="dotNet" Runtime="iis" xmlns="http://tempuri.org/PackageSchema.xsd">
+  <PackageFile>C:\Projects\IFtest\IFtest\uhurucloud.uhcf</PackageFile>
+  <Urls>ronTest2.uhuru1.cps.intel.com</Urls>
+  <DeploymentPath>C:\Projects\IFtest\IFtest</DeploymentPath>
+</CloudApplication>
