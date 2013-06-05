@@ -1,0 +1,331 @@
+body
+{    
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    color: #232323;
+    background-color: #F2F2F2;
+    font-size: 12px;
+    line-height:14px;
+    height:100%;
+    width:100%;
+    float:left;
+    margin:auto;
+}
+
+header,
+footer,
+nav,
+section {
+    display: block;
+}
+
+div
+{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    line-height:14px;
+}
+
+a:link, a:visited {
+color: #00598D;
+text-decoration: underline;
+font-weight: bold;
+}
+
+a:hover {
+text-decoration: none;
+}
+
+/*-------------Headings-------------*/
+
+h1 {
+font: 2.0em  Neo Sans Intel, Verdana;
+margin: 0 0 10px 40px;
+/*border-bottom: 1px solid #4C8CA6;*/
+width: 70%;
+padding: 15px 0 5px 0;
+}
+
+h1 a:link, h1 a:visited {
+font-weight: normal;
+text-decoration: none;
+color: #FFFFFF;
+}
+
+h2 {
+font: 1.2em Neo Sans Intel;
+letter-spacing: 1px;
+color: #FFFFFF;
+border-left: 3px solid #FFAE20;
+padding-left: 14px;
+margin: 12px 0 0 40px;
+}
+
+h3 {
+color: #00598D;
+font: 1.7em Neo Sans Intel;
+letter-spacing: 1px;
+background: url('images/h3-bg.gif') no-repeat 0 50%;
+padding-left: 35px;
+margin: 18px 0 10px 0;
+}
+
+h4 {
+font-size: 1em;
+background-color: #005E85;
+color: #FFFFFF;
+letter-spacing: 1px;
+border: 2px solid #FFFFFF;
+margin-top: 7px;
+padding: 6px 10px;
+}
+h5 {
+font-size: 1em;
+color: #D15900;
+letter-spacing: 1px;
+border: 2px solid #FFFFFF;
+margin-top: 7px;
+padding: 6px 10px;
+}
+h6 {
+font-size: 1em;
+color: black;
+letter-spacing: 1px;
+border: 2px solid #FFFFFF;
+margin-top: 7px;
+padding: 6px 10px;
+}
+
+/* Styles for basic forms
+-----------------------------------------------------------*/
+
+fieldset 
+{
+    border:1px solid #ddd;
+    padding:0 1.4em 1.4em 1.4em;
+    margin:0 0 1.5em 0;
+}
+
+legend 
+{
+    font-size:1.2em;
+    font-weight: bold;
+}
+
+textarea 
+{
+    min-height: 75px;
+}
+
+.editor-label 
+{
+    margin: 1em 0 0 0;
+}
+
+.editor-field 
+{
+    margin:0.5em 0 0 0;
+}
+
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error
+{
+    color: #ff0000;
+}
+
+.field-validation-valid
+{
+    display: none;
+}
+
+.input-validation-error
+{
+    border: 1px solid #ff0000;
+    background-color: #ffeeee;
+}
+
+.validation-summary-errors
+{
+    font-weight: bold;
+    color: #ff0000;
+}
+
+.validation-summary-valid
+{
+    display: none;
+}
+
+/*---------------- Styles for layout-------------*/
+
+#main-wrapper
+{
+    width:100%;
+    float:left;
+    font: 10pt Verdana, Arial, Helvetica, sans-serif;
+    background-color: #F2F2F2;
+    text-align:center;
+}
+
+#layout-wrapper
+{
+    width:1200px;    
+    background-color: white;
+    text-align:left;  
+    margin-left:20%;      
+    margin-right:20%;  
+    float:left;   
+}
+
+/*Header styling*/
+#header
+{
+    height: 80px;    
+    float:left;
+    width:100%;
+    background: url('images/global-hdr.jpg') repeat-x scroll 0 0 #1568AC;   
+    /*border-bottom: 1px solid #46A0CA;*/
+}
+
+#header-logo
+{
+    height:100%;
+    float:left;
+    width:10%;
+    background:url('images/logo.gif') no-repeat 0 0;
+}
+#header-appTitle
+{
+    height:100%;
+    float:left;
+    width:90%;
+}
+#header-appTitle a
+{
+    font-family: Neo Sans Intel, Verdana;
+}
+/*Menu Styling*/
+#menu
+{
+    width: 100%;
+    margin: 0 auto;
+    background: url("images/ui-bg_highlight-soft_75_cccccc_1x100.png") repeat-x scroll 50% 50% #CCCCCC;
+    float:left;
+    padding:0;
+    border:1px, solid, #AAAAAA;
+}
+
+#menu li {
+display: inline;
+list-style-type: none;
+}
+
+#menu li.first a {
+margin-left: 1.6em;
+display: inline;
+}
+
+#menu li a {
+float: left;
+color: Black;
+font-weight: normal;
+text-decoration: none;
+font-size: 1.1em;
+line-height: 33px;
+margin: 0 0.5em;
+padding: 0 1em;
+}
+
+#menu li a:hover {
+text-decoration: underline;
+}
+
+#menu li a.active {
+font-weight: bold;
+color: #B1EEFF;
+}
+
+.cleaning-box { 
+min-height: 1px;
+}
+
+.cleaning-box:after {
+display: block; 
+clear: both; 
+visibility: hidden; 
+height: 0; 
+font-size: 0; 
+content: ' ';
+}
+
+#content-box
+{
+    height: 100%;    
+    float:left;
+    width:100%;
+    background:white;   
+}
+
+/*Footer styling*/
+#footer
+{
+    height: 34px;
+    float:left;
+    width:100%;
+    background: url('images/global-footer.jpg') repeat-x scroll 0 0 #1568AC;
+    color: white;        
+    font-size: 0.9em;
+    /*border-bottom: 2px solid #003042;    */
+}
+
+#footer a.b, #footer a.b a:visited
+{
+    font-weight: bold !important;
+}
+
+
+label.fieldLabel {
+    color:#2E6E9E;
+    font-weight:bold;
+}
+
+input.small {
+    width:45px;
+}
+
+input[type="text"] {    
+    border: 1px solid lightgray;
+    color: black;    
+    padding: 2px;
+}
+
+select {
+    background: none repeat scroll 0 0 white;
+    border: 1px solid lightgray;
+    color: black;    
+    padding: 2px;
+}
+
+select.listBox {
+    background: none repeat scroll 0 0 white;
+    border: 1px solid lightgray;
+    color: black;    
+    padding: 2px;
+    width:250px;
+
+}
+
+/*People Picker Styles*/
+#searchPeopleButton {
+    float:right;
+    cursor:pointer;
+}
+
+#searchPeopleButton:hover {     
+    background-color:white;
+}
+
+#people-picker-wrapper table{
+    margin:auto;
+    width:100%;
+}

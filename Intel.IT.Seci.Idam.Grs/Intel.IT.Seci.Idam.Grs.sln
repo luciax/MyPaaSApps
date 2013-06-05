@@ -1,0 +1,65 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intel.IT.Seci.Idam.Grs.Test", "Intel.IT.Seci.Idam.Grs.Test\Intel.IT.Seci.Idam.Grs.Test.csproj", "{0AC5F4D9-B0BB-417F-90A2-390E635F392E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intel.IT.Seci.Idam.Grs.MvcWeb", "Intel.IT.Seci.Idam.Grs.MvcWeb\Intel.IT.Seci.Idam.Grs.MvcWeb.csproj", "{8CD3D3FC-F92B-4CB5-BFA1-46953F9B9E35}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intel.IT.Seci.Idam.Grs.Domain", "Intel.IT.Seci.Idam.Grs.Domain\Intel.IT.Seci.Idam.Grs.Domain.csproj", "{62E254A9-EA94-4755-8F51-5B7B11D49C7A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intel.IT.Seci.Idam.Grs.Infrastucture", "Intel.IT.Seci.Idam.Grs.Infrastucture\Intel.IT.Seci.Idam.Grs.Infrastucture.csproj", "{BB360709-7ED3-4CB6-AD44-9E2A37919609}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intel.IT.Seci.Idam.Grs.Application", "Intel.IT.Seci.Idam.Grs.Application\Intel.IT.Seci.Idam.Grs.Application.csproj", "{6F8BE021-6FF3-487F-B123-B3E42BAD8B02}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://source2010.intel.com:8090/tfs/tfs-smt-utils
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Intel.IT.Seci.Idam.Grs.Test\\Intel.IT.Seci.Idam.Grs.Test.csproj
+		SccProjectName1 = Intel.IT.Seci.Idam.Grs.Test
+		SccLocalPath1 = Intel.IT.Seci.Idam.Grs.Test
+		SccProjectUniqueName2 = Intel.IT.Seci.Idam.Grs.MvcWeb\\Intel.IT.Seci.Idam.Grs.MvcWeb.csproj
+		SccProjectName2 = Intel.IT.Seci.Idam.Grs.MvcWeb
+		SccLocalPath2 = Intel.IT.Seci.Idam.Grs.MvcWeb
+		SccProjectUniqueName3 = Intel.IT.Seci.Idam.Grs.Infrastucture\\Intel.IT.Seci.Idam.Grs.Infrastucture.csproj
+		SccProjectName3 = Intel.IT.Seci.Idam.Grs.Infrastucture
+		SccLocalPath3 = Intel.IT.Seci.Idam.Grs.Infrastucture
+		SccProjectUniqueName4 = Intel.IT.Seci.Idam.Grs.Domain\\Intel.IT.Seci.Idam.Grs.Domain.csproj
+		SccProjectName4 = Intel.IT.Seci.Idam.Grs.Domain
+		SccLocalPath4 = Intel.IT.Seci.Idam.Grs.Domain
+		SccProjectUniqueName5 = Intel.IT.Seci.Idam.Grs.Application\\Intel.IT.Seci.Idam.Grs.Application.csproj
+		SccProjectName5 = Intel.IT.Seci.Idam.Grs.Application
+		SccLocalPath5 = Intel.IT.Seci.Idam.Grs.Application
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0AC5F4D9-B0BB-417F-90A2-390E635F392E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AC5F4D9-B0BB-417F-90A2-390E635F392E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AC5F4D9-B0BB-417F-90A2-390E635F392E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AC5F4D9-B0BB-417F-90A2-390E635F392E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CD3D3FC-F92B-4CB5-BFA1-46953F9B9E35}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CD3D3FC-F92B-4CB5-BFA1-46953F9B9E35}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CD3D3FC-F92B-4CB5-BFA1-46953F9B9E35}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CD3D3FC-F92B-4CB5-BFA1-46953F9B9E35}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62E254A9-EA94-4755-8F51-5B7B11D49C7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62E254A9-EA94-4755-8F51-5B7B11D49C7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62E254A9-EA94-4755-8F51-5B7B11D49C7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62E254A9-EA94-4755-8F51-5B7B11D49C7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB360709-7ED3-4CB6-AD44-9E2A37919609}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB360709-7ED3-4CB6-AD44-9E2A37919609}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB360709-7ED3-4CB6-AD44-9E2A37919609}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB360709-7ED3-4CB6-AD44-9E2A37919609}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F8BE021-6FF3-487F-B123-B3E42BAD8B02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F8BE021-6FF3-487F-B123-B3E42BAD8B02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F8BE021-6FF3-487F-B123-B3E42BAD8B02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F8BE021-6FF3-487F-B123-B3E42BAD8B02}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,24 @@
+﻿<div id="people-picker-dialog-box">
+    <div id="people-picker-wrapper">
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        <label class="fieldLabel"> Find by Name or WWID: </label>
+                    </td>
+                    <td>
+                        <input id="txtPeopleFilter" type="text" style="width:200px;"/> &nbsp; <img id="searchPeopleButton" src="@Url.Content("~/Content/images/search-icon-30x30.png")" alt="Search" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label class="fieldLabel">People Found: </label>
+                    </td>
+                    <td>
+                        <select multiple="multiple" class="listBox" id="peopleFoundListBox" data-bind="options:foundWorkers, optionsText:function(item){return item.FullName}, optionsValue:function(item){return item.Wwid}"></select>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

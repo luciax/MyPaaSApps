@@ -1,0 +1,230 @@
+﻿@{
+    ViewBag.Title = "Create Computer";
+}
+@section Css{
+    <link href="@Url.Content("~/Content/CreateComputer.css")" rel="stylesheet" type="text/css" />
+}
+@section JavaScript{   
+    <script type="text/javascript" src="@Url.Content("~/Scripts/ViewModels/CreateComputerViewModels.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/CreateComputer.js")"></script>  
+    
+    <!-- ****************** Html Knocutjs templates for the tabs Binding ******************************** -->
+    <script id="tabTmpl" type="text/html">
+        <div data-bind="template: { name: contentTmpl, data: contentData}"></div>
+    </script>
+
+    <script id="normalContentTmpl" type="text/html">
+        <!-- ko foreach: ChildDomains -->
+        <div data-bind="text: FriendlyName, attr:{'class': 'draggableDomain', 'data-parent-domain': ParentFullName, 'data-domain-fullname': FullName}">           
+        </div>
+        <!-- /ko -->
+    </script>
+
+    <!-- *********************** Controllers Urls variables ****************************** -->
+    <script type="text/javascript">
+        var getSitesUrl = '@Url.Action("GetCdisSites","CreateComputer")';
+        var getCampusesUrl = '@Url.Action("GetCdisCampuses","CreateComputer")';
+        var getBuildingsUrl = '@Url.Action("GetCdisBuildings","CreateComputer")';
+        var getComputerRolesUrl = '@Url.Action("GetComputerRoles", "CreateComputer")';
+        var getDomainControllersUrl = '@Url.Action("GetAdDomains", "CreateComputer")';
+        var postComputerRequestUrl = '@Url.Action("SubmitComputerRequest", "CreateComputer")';        
+    </script>
+
+}
+<div id="createComputerContent">
+    <!-- ******* Domains tabs ************ -->
+    <div id="domainsGridWrapper">
+        <p><span class="informationText">Select and drag a domain from the list and drop it on the domains box</span></p>
+        <div id="tabs" data-bind="jqTabs: { fx: { opacity: 'toggle' } }">
+            <ul data-bind="foreach: tabs">
+                <li>
+                    <a data-bind="attr:{href:'#tab-' + id()}, text:id"></a>
+                </li>
+            </ul>
+            <!-- ko foreach: tabs -->
+            <div data-bind="attr: {id: 'tab-'+id()}, template: { name: 'tabTmpl', data: $data }"></div>
+            <!-- /ko -->
+        </div>
+    </div>
+
+    <!-- ******* Drop Boxes ************************* -->
+    <div id="dropBoxesWrapper">
+        <p><span class="informationText">Drop your items here:</span></p>
+        <div id="domainDropBox" class="dropBox">
+            Drop the domain here:
+        </div>
+        <div id="computerRoleDropBox" class="dropBox">
+            Drop the Computer Role here:
+        </div>
+    </div>
+
+    <!-- ********* Computer Roles List *******************-->
+    <div id="computerRolesGridWrapper">
+        <p><span class="informationText">Select and drag a computer role from the list and drop it on the computer roles box</span></p>
+        <div id="computerRolesList" class="itemList" data-bind="foreach: computerRoles">
+            <div class="draggableComputerRole" data-bind="text: $data.RoleDescription, value: $data.ComputerRoleId"></div>
+        </div>
+    </div>
+
+    <!-- *********** Additional Information and Request Summary sections Wrapper ******************** -->
+    <div id="addiotionalInfoWrapper">
+        <!--****************** Addtional Information Section ******************************************-->
+        <div id="addtionalInformationForm">
+            <div class="headerDiv">
+                Please provide AdtionalInformation if Needed
+            </div>
+            <div id="additionalInfoContent">                
+                <div id="divDTNetCentricUser" class="additionalInfo-content">
+                    <label for="ddAvailableSites" class="fieldLabel" title="Please Select a Site">Site:&nbsp;</label>
+                    <select id="ddAvailableSites" data-bind="options:sites, optionsText:function(item){return item.Name}, optionsValue:function(item){return item.Value}"></select>
+                </div>
+                <div id="divNetCentricBullpen" class="additionalInfo-content">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td colspan="3">
+                                    <label for="ddAvailableCampuses" class="fieldLabel" title="Please Select a Site">Campus:&nbsp;</label>
+                                    <select id="ddAvailableCampuses" data-bind="options:campuses, optionsText:function(item){return item.Name}, optionsValue:function(item){return item.Value}"></select>                                    
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="ddAvailableBuildings" class="fieldLabel" title="Please Select a Building">Building:&nbsp;</label>
+                                    <select id="ddAvailableBuildings" data-bind="options:buildings, optionsText:function(item){return item.Name}, optionsValue:function(item){return item.Value}"></select>
+                                </td>
+                                <td>
+                                    <label for="ddFloors" class="fieldLabel" title="Please Select a floor">Floor:&nbsp;</label>
+                                    <select id="ddFloors" data-bind="options:floors"></select>
+                                </td>
+                                <td>
+                                    <label for="txtPole" class="fieldLabel" title="Please type a Pole">Pole:&nbsp;</label>
+                                    <input type="text" id="txtPole" class="small" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">
+                                    <label for="ddMachineNumber" class="fieldLabel" title="Please Select a Machine Number">Machine Number:&nbsp;</label>
+                                    <select id="ddMachineNumber" data-bind="options:machineNumberValues"></select>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="divServerIT" class="additionalInfo-content">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <label for="txtSite" class="fieldLabel" title="Please Select a Site">Site:&nbsp;</label>
+                                    <input type="text" class="small" id="txtSite" />
+                                </td>
+                                <td>
+                                    <label for="txtDeptApp" class="fieldLabel" title="Please Select a Site">Dept/App:&nbsp;</label>
+                                    <input type="text" class="small" id="txtDeptApp" />
+                                </td>
+                                <td>
+                                    <label for="txtMachineNumber" class="fieldLabel" title="Please Select a Site">MachineNumber:&nbsp;</label>
+                                    <input type="text" class="small" id="txtMachineNumber"/>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+         <!--****************** Request Summary Section ******************************************-->
+        <div id="requestSummaryform">
+            <div class="headerDiv">
+                Your Request Summary:
+            </div>
+            <div id="divRequestSummary" class="requestSummary-content">
+                <div id="divAjaxLoader"><img src="@Url.Content("~/Content/images/ajax-loader.gif")"/></div>
+                <div id="divValidationSummary">
+                    <p id="serverError"><span></span></p>
+                </div>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <label class="fieldLabel">Request Id:&nbsp;</label>
+                            </td>
+                            <td colspan="2">
+                                <p data-bind="text:RequestId"></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="fieldLabel">Request Status:&nbsp;</label>
+                            </td>
+                            <td colspan="2">
+                                <p data-bind="text:RequestStatusName"></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="fieldLabel">Submitter:&nbsp;</label>
+                            </td>
+                            <td colspan="2">
+                                <p><a href="#" data-bind="text:SubmitterName"></a></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="fieldLabel">Requested For:&nbsp;</label>
+                            </td>
+                            <td>
+                                <p><a href="#" data-bind="text:RequestedForName"></a>                                   
+                                </p>
+                            </td>
+                            <td>
+                                 <input type="button" value="Change" id="btnChangeRequestedFor" class="button" style="float:right;"/>
+                            </td>
+                        </tr>
+                        <tr id="divApprover">
+                            <td>
+                                <label class="fieldLabel">Approver:&nbsp;</label>
+                            </td>
+                            <td>
+                                <a href="#" data-bind="text:ApproverName"></a>
+                            </td>
+                            <td>
+                                <input type="button" value="Change" id="btnChangeApprover" class="button" style="float:right;"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="fieldLabel">Domain:&nbsp;</label>
+                            </td>
+                            <td colspan="2">
+                                <p><span data-bind="text:ComputerDomain"></span></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="fieldLabel">Computer Role:&nbsp;</label>
+                            </td>
+                            <td colspan="2">
+                                <p><span data-bind="text:ComputerRoleText"></span></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="fieldLabel">Computer Name:&nbsp;</label>
+                            </td>
+                            <td colspan="2">
+                                <p><span data-bind="text:ComputerName"></span></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" style="text-align:center">
+                                <input type="button" class="button" value ="Submit" id="btnSubmitComputerRequest"/>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+@Html.Partial("_PeoplePicker")

@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Intel.IT.Seci.Idam.Grs.Domain.Entities.CreateComputerRequest">
+    <Position X="3.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABACAAAAACAAAAAAAAAAAAAAAAAQAEAAgAAAAAAAAA=</HashCode>
+      <FileName>Entities\CreateComputerRequest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Intel.IT.Seci.Idam.Grs.Domain.Entities.GrsRequest">
+    <Position X="3.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAQACAAAQAAAAACCEAAAAABAEAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\GrsRequest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Intel.IT.Seci.Idam.Grs.Domain.ValueObjects.CreateComputerRequestDto">
+    <Position X="5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAAAAAAAAAAAAAAQAEAAgAAAAAAAAA=</HashCode>
+      <FileName>ValueObjects\CreateComputerRequestDto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Intel.IT.Seci.Idam.Grs.Domain.ValueObjects.GrsRequestDto">
+    <Position X="5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEIAQAAAAAAAEAAAEAAAEAAAAAAAAAgAA=</HashCode>
+      <FileName>ValueObjects\GrsRequestDto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Intel.IT.Seci.Idam.Grs.Domain.ValueObjects.IntelWorker">
+    <Position X="1" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEBEASAEgIgAAAAAQAUAAgAAAAAAAAAAAAAAAAo=</HashCode>
+      <FileName>ValueObjects\IntelWorker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Intel.IT.Seci.Idam.Grs.Domain.ValueObjects.ValidationResult">
+    <Position X="1.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJAAAAAA=</HashCode>
+      <FileName>ValueObjects\ValidationResult.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Intel.IT.Seci.Idam.Grs.Domain.ConstantsEnums.ValidationMessages" Collapsed="true">
+    <Position X="0.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>ConstantsEnums\ValidationMessages.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Intel.IT.Seci.Idam.Grs.Domain.Dal.Cdis.ICdisHelper">
+    <Position X="9.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAEAQAAAEAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Dal\Cdis\ICdisHelper.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Intel.IT.Seci.Idam.Grs.Domain.Dal.AD.IAdHelper">
+    <Position X="7.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>Dal\AD\IAdHelper.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Intel.IT.Seci.Idam.Grs.Domain.Factories.IRequestFactory">
+    <Position X="7.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAACAAAAAAQCBAAAAAAAAAAA=</HashCode>
+      <FileName>Factories\IRequestFactory.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="AdHelper" />
+      <Property Name="CdisHelper" />
+    </ShowAsAssociation>
+  </Interface>
+  <Enum Name="Intel.IT.Seci.Idam.Grs.Domain.ConstantsEnums.ADObjectType" Collapsed="true">
+    <Position X="2.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>ConstantsEnums\ADObjectType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Intel.IT.Seci.Idam.Grs.Domain.ConstantsEnums.ComputerRoleType" Collapsed="true">
+    <Position X="4" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAgAAAAAAAAAAIACACAAAIAAAgEAAAEAAAA=</HashCode>
+      <FileName>ConstantsEnums\ComputerRoleType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Intel.IT.Seci.Idam.Grs.Domain.ConstantsEnums.IntelEmployeeStatus" Collapsed="true">
+    <Position X="5.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIEEEAAA=</HashCode>
+      <FileName>ConstantsEnums\IntelEmployeeStatus.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Intel.IT.Seci.Idam.Grs.Domain.ConstantsEnums.TransactionType" Collapsed="true">
+    <Position X="7.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ConstantsEnums\TransactionType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

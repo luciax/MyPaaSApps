@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{62E254A9-EA94-4755-8F51-5B7B11D49C7A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Intel.IT.Seci.Idam.Grs.Domain</RootNamespace>
+    <AssemblyName>Intel.IT.Seci.Idam.Grs.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DocumentationFile>bin\Debug\Intel.IT.Seci.Idam.Grs.Domain.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConstantsEnums\ComputerRoleType.cs" />
+    <Compile Include="ConstantsEnums\ADObjectType.cs" />
+    <Compile Include="ConstantsEnums\RequestStatus.cs" />
+    <Compile Include="ConstantsEnums\IntelEmployeeStatus.cs" />
+    <Compile Include="ConstantsEnums\TransactionType.cs" />
+    <Compile Include="ConstantsEnums\ValidationMessages.cs" />
+    <Compile Include="Dal\AD\IAdHelper.cs" />
+    <Compile Include="Dal\Cdis\ICdisHelper.cs" />
+    <Compile Include="Entities\CreateComputerRequest.cs" />
+    <Compile Include="Entities\GrsRequest.cs" />
+    <Compile Include="Factories\IRequestFactory.cs" />
+    <Compile Include="Factories\RequestFactory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\IRequestRepository.cs" />
+    <Compile Include="ValueObjects\Comparers\IntelWorkerComparer.cs" />
+    <Compile Include="ValueObjects\CreateComputerRequestDto.cs" />
+    <Compile Include="ValueObjects\DomainController.cs" />
+    <Compile Include="ValueObjects\GrsRequestDto.cs" />
+    <Compile Include="ValueObjects\IntelWorker.cs" />
+    <Compile Include="ValueObjects\ValidationResult.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DomainServices\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Domain.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <CodeAnalysisDictionary Include="CustomDictionary.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

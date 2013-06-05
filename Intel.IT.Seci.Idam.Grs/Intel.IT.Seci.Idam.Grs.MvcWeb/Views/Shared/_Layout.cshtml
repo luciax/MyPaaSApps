@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />  
+    <link href="@Url.Content("~/Content/themes/overcast/jquery-ui-1.10.1.custom.css")" rel="stylesheet" type="text/css" />
+    @RenderSection("Css") 
+    <script type="text/javascript" src="@Url.Content("~/Scripts/jquery-1.9.1.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/jquery-ui-1.10.1.custom.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/knockout-2.2.1.js")"></script>   
+    <script type="text/javascript" src="@Url.Content("~/Scripts/KnockoutMapping-2.4.1.js")"></script>    
+    <script type="text/javascript" src="@Url.Content("~/Scripts/common.js")"></script>
+    <script type="text/javascript">
+        var urlFindWorkers = '@Url.Action("FindWorkers","Common")';
+        var urlGetWorkerData = '@Url.Action("GetWorkerByIdsidOrWwid","Common")';
+    </script>
+    @RenderSection("JavaScript")
+</head>
+<body>
+    <div id="main-wrapper">
+        <div id="layout-wrapper">
+            <div id="header">
+                <div id="header-appTitle">
+                    <h1>
+                        <a href="#">Global Request System 2.0</a></h1>
+                        @*<input type="hidden" id="userIdsid" value="@User.Identity.Name"/>*@
+                        <input type="hidden" id="userIdsid" value="AMR\lcastell"/>
+                </div>
+                <div id="header-logo">
+                </div>
+            </div>
+            <ul id="menu" class="cleaning-box">
+                <li><a href="#">Menu Item 1</a></li>
+                <li><a href="#">Menu Item 1</a></li>
+                <li><a href="#">Menu Item 1</a></li>
+            </ul>
+            <div id="content-box">
+                @RenderBody()
+            </div>
+            <div id="footer">
+                <p style="float: left; margin-left: 15px; margin-top:15px;">
+                    &copy; <a class="b">Copyright Intel Corporation 2012</a>
+                </p>
+                <p style="float: right; margin-right: 15px;margin-top:15px;">
+                    <a>Information Technology</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
